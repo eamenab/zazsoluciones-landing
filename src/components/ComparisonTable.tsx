@@ -76,6 +76,7 @@ const ComparisonTable = () => {
           </p>
         </div>
 
+        {/* Table Column Headers as Cards - Now merged */}
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-12">
           <BlurredCard className="animate-fade-in flex flex-col items-center text-center p-8">
             <div className="w-16 h-16 flex items-center justify-center bg-zaz-blue/10 rounded-xl mb-6">
@@ -113,14 +114,14 @@ const ComparisonTable = () => {
           </BlurredCard>
         </div>
 
-        {/* Comparison Table */}
+        {/* Comparison Table - Now without separate headers */}
         <div className="overflow-x-auto animate-fade-in animation-delay-500">
           <div className="min-w-[768px]">
-            <div className="grid grid-cols-4 gap-4 mb-4 py-4 border-b">
+            <div className="grid grid-cols-4 gap-4 py-4 border-b">
               <div className="font-semibold">Característica</div>
-              <div className="text-center font-semibold">Desarrollo Tradicional</div>
-              <div className="text-center font-semibold text-zaz-blue">SaaS a la Medida</div>
-              <div className="text-center font-semibold">SaaS Tradicional</div>
+              <div className="text-center font-semibold sr-only">Desarrollo Tradicional</div>
+              <div className="text-center font-semibold sr-only text-zaz-blue">SaaS a la Medida</div>
+              <div className="text-center font-semibold sr-only">SaaS Tradicional</div>
             </div>
 
             {features.map((feature, index) => (

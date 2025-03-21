@@ -85,9 +85,10 @@ const Solutions = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+          {/* Solution selector - now at the top-left */}
           <div className="md:col-span-4 animate-slide-in">
-            <div className="space-y-2 mb-8">
+            <div className="space-y-2">
               {solutions.map((solution) => (
                 <button
                   key={solution.id}
@@ -113,30 +114,9 @@ const Solutions = () => {
                 </button>
               ))}
             </div>
-
-            <BlurredCard className="border border-zaz-gray">
-              <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                {currentSolution.title}
-              </h3>
-              <p className="text-zaz-dark-gray mb-6">
-                {currentSolution.description}
-              </p>
-              <ul className="space-y-3 mb-6">
-                {currentSolution.features.map((feature, index) => (
-                  <li key={index} className="flex items-start gap-2">
-                    <div className="w-5 h-5 rounded-full bg-zaz-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                      <Check className="w-3 h-3 text-zaz-blue" />
-                    </div>
-                    <span className="text-sm">{feature}</span>
-                  </li>
-                ))}
-              </ul>
-              <button className="text-zaz-blue font-medium flex items-center hover:underline transition-all">
-                Conoce más <ArrowRight className="w-4 h-4 ml-1" />
-              </button>
-            </BlurredCard>
           </div>
 
+          {/* Solution image - now aligned with the menu */}
           <div className="md:col-span-8 animate-slide-in-right">
             <div className="relative rounded-xl overflow-hidden aspect-[16/9] shadow-2xl">
               <img
@@ -144,16 +124,31 @@ const Solutions = () => {
                 alt={currentSolution.title}
                 className="w-full h-full object-cover transition-all duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-              
-              <div className="absolute bottom-0 left-0 right-0 p-8">
-                <div className="glass rounded-xl p-6 max-w-lg mx-auto md:mx-0">
-                  <h4 className="text-white text-xl font-bold mb-2">{currentSolution.title}</h4>
-                  <p className="text-white/80 text-sm">
-                    {currentSolution.description}
-                  </p>
-                </div>
-              </div>
+            </div>
+            
+            {/* Solution description - now below the image */}
+            <div className="mt-6">
+              <BlurredCard className="border border-zaz-gray">
+                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+                  {currentSolution.title}
+                </h3>
+                <p className="text-zaz-dark-gray mb-6">
+                  {currentSolution.description}
+                </p>
+                <ul className="space-y-3 mb-6">
+                  {currentSolution.features.map((feature, index) => (
+                    <li key={index} className="flex items-start gap-2">
+                      <div className="w-5 h-5 rounded-full bg-zaz-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                        <Check className="w-3 h-3 text-zaz-blue" />
+                      </div>
+                      <span className="text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <button className="text-zaz-blue font-medium flex items-center hover:underline transition-all">
+                  Conoce más <ArrowRight className="w-4 h-4 ml-1" />
+                </button>
+              </BlurredCard>
             </div>
           </div>
         </div>
