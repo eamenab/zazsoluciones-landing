@@ -12,28 +12,28 @@ const Solutions = () => {
       title: "Centraliza tu operación",
       description: "Maneja toda la información en un solo lugar, conectada y ordenada.",
       icon: <Database className="w-6 h-6 text-zaz-blue" />,
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&q=80"
     },
     {
       id: "customers",
       title: "Maneja tus clientes de manera efectiva",
       description: "Gestiona el ciclo completo de tus clientes con herramientas inteligentes.",
       icon: <Users className="w-6 h-6 text-zaz-blue" />,
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&q=80"
     },
     {
       id: "ai",
       title: "Automatiza tu operación apoyado en Agentes de AI",
       description: "Implementa asistentes virtuales entrenados para tu negocio.",
       icon: <Bot className="w-6 h-6 text-zaz-blue" />,
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80"
     },
     {
       id: "incentives",
       title: "Sistema de pago de incentivos variables",
       description: "Gestiona comisiones y bonos de forma automatizada y transparente.",
       icon: <DollarSign className="w-6 h-6 text-zaz-blue" />,
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1599658880436-c61792e70672?auto=format&fit=crop&q=80"
     },
     {
       id: "reconciliation",
@@ -47,7 +47,7 @@ const Solutions = () => {
       title: "Eficienta tu coordinación y comunicación",
       description: "Mejora la colaboración interna con herramientas integradas.",
       icon: <MessageSquare className="w-6 h-6 text-zaz-blue" />,
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=800"
+      image: "https://images.unsplash.com/photo-1579226905180-636b76d96082?auto=format&fit=crop&q=80&w=800"
     },
     {
       id: "integrations",

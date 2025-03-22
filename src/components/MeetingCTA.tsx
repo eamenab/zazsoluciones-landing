@@ -5,7 +5,7 @@ import { Calendar, Clock } from "lucide-react";
 
 const MeetingCTA = () => {
   return (
-    <section className="py-20 relative overflow-hidden">
+    <section id="reunion" className="py-20 relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center animate-fade-in">
           <div className="inline-block px-3 py-1 rounded-full bg-zaz-purple/10 text-zaz-purple text-sm font-medium mb-4">
@@ -14,11 +14,6 @@ const MeetingCTA = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Comienza Tu Transformación Digital Hoy
           </h2>
-          <p className="text-zaz-dark-gray mb-10 max-w-2xl mx-auto">
-            Agenda una sesión de consultoría gratuita con nuestro equipo para
-            analizar tus necesidades y mostrarte cómo podemos ayudarte.
-          </p>
-
           <div className="bg-white shadow-lg rounded-xl p-8 border border-zaz-gray animate-fade-in animation-delay-200">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
               <div className="flex items-start gap-4">
@@ -27,9 +22,6 @@ const MeetingCTA = () => {
                 </div>
                 <div className="text-left">
                   <h3 className="font-bold mb-1">30 Minutos</h3>
-                  <p className="text-sm text-zaz-dark-gray">
-                    Sesión de consultoría inicial sin costo
-                  </p>
                 </div>
               </div>
 
@@ -38,20 +30,19 @@ const MeetingCTA = () => {
                   <Calendar className="w-6 h-6 text-zaz-blue" />
                 </div>
                 <div className="text-left">
-                  <h3 className="font-bold mb-1">Disponibilidad Inmediata</h3>
-                  <p className="text-sm text-zaz-dark-gray">
-                    Selecciona el horario que mejor te convenga
-                  </p>
+                  <h3 className="font-bold mb-1">Selecciona el horario que mejor te convenga</h3>
                 </div>
               </div>
             </div>
-
-            <Button
-              className="bg-blue-gradient shadow-button font-medium text-base py-6 px-8 hover:shadow-lg transition-all hover:scale-105 w-full md:w-auto"
-              onClick={() => window.open("https://calendly.com", "_blank")}
-            >
-              Agendar Mi Sesión Ahora
-            </Button>
+              {/* Calendly Embed */}
+              <div className="mt-8 w-full">
+                <iframe 
+                  src="https://calendly.com/ernestoamenabar?hide_landing_page_details=1&text_color=003333&primary_color=003333"
+                  width="100%" 
+                  height="1100" 
+                  allowFullScreen
+                />
+              </div>
           </div>
         </div>
       </div>

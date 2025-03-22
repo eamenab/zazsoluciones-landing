@@ -28,7 +28,7 @@ const BusinessBenefits = () => {
   ];
 
   return (
-    <section id="beneficios" className="py-20 bg-gradient-to-b from-background to-zaz-light-gray">
+    <section id="pensada" className="py-20 bg-gradient-to-b from-background to-zaz-light-gray">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <div className="inline-block px-3 py-1 rounded-full bg-zaz-blue/10 text-zaz-blue text-sm font-medium mb-4">
