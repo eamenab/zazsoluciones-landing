@@ -124,13 +124,11 @@ const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="max-w-2xl animate-fade-in">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-              SaaS a la Medida con{" "}
-              <span className="highlight-text">Inteligencia Artificial</span>
+              Del Excel al orden.{" "}
+              <span className="highlight-text">Software a tu medida, en semanas, no meses.</span>
             </h1>
             <p className="text-lg text-zaz-dark-gray mb-8 max-w-lg">
-              Transformamos tu negocio con soluciones de software personalizadas
-              que se adaptan perfectamente a tus necesidades, impulsadas por las
-              últimas tecnologías de IA.
+              Automatiza tareas repetitivas y conecta todas las partes de tu operación en un solo sistema, hecho a medida e impulsado por AI.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-blue-gradient text-white px-6 py-6 shadow-button font-medium text-base hover:shadow-lg transition-all hover:scale-105 flex items-center">
