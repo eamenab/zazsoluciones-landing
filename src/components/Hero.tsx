@@ -28,21 +28,21 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="absolute inset-y-0 right-0 w-1/2 flex items-center z-1">
-            <div className="relative w-full h-full h-[75%]">
+          <div className="hidden md:flex md:justify-center md:items-center md:h-full md:relative">
+            <div className="relative w-full h-[73vh]">
               <video
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="h-full w-auto object-cover brightness-[1.15] contrast-[0.85]"
+                className="h-full w-auto object-cover brightness-[1.1] contrast-[0.85]"
                 src={`${import.meta.env.BASE_URL}26011-353916142_tiny.mp4`}
               />
               {/* Edge blending overlays */}
-              <div className="absolute top-0 left-0 h-full w-80 bg-gradient-to-r from-white from-white z-10" />
-              <div className="absolute top-0 right-0 h-full w-80 bg-gradient-to-l from-white from-white z-10" />
-              <div className="absolute top-0 left-0 w-full h-80 bg-gradient-to-b from-white from-white z-10" />
-              <div className="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-white from-white z-10" />
+              <div className="absolute top-0 left-0 h-full w-80 bg-gradient-to-r from-white to-transparent z-10" />
+              <div className="absolute top-0 right-0 h-full w-80 bg-gradient-to-l from-white to-transparent z-10" />
+              <div className="absolute top-0 left-0 w-full h-80 bg-gradient-to-b from-white to-transparent z-10" />
+              <div className="absolute bottom-0 left-0 w-full h-80 bg-gradient-to-t from-white to-transparent z-10" />
             </div>
           </div>
         </div>
