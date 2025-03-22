@@ -35,8 +35,8 @@ const Header = () => {
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#diferencias" className="nav-link text-sm font-medium text-zaz-dark-gray hover:text-zaz-black transition-colors">
-            Qué nos Diferencia
+          <a href="#pensada" className="nav-link text-sm font-medium text-zaz-dark-gray hover:text-zaz-black transition-colors">
+            Pensada para tu Negocio
           </a>
           <a href="#soluciones" className="nav-link text-sm font-medium text-zaz-dark-gray hover:text-zaz-black transition-colors">
             Soluciones
@@ -63,11 +63,11 @@ const Header = () => {
       >
         <nav className="container mx-auto px-4 flex flex-col space-y-4 pb-4">
           <a
-            href="#diferencias"
+            href="#pensada"
             className="text-sm font-medium text-zaz-dark-gray hover:text-zaz-black transition-colors py-2"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Qué nos Diferencia
+            Pensada para tu Negocio
           </a>
           <a
             href="#soluciones"

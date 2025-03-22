@@ -2,15 +2,6 @@
 import React, { useState } from "react";
 import BlurredCard from "./ui/BlurredCard";
 import { Database, Users, Bot, DollarSign, FileCheck, MessageSquare, Layers } from "lucide-react";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { 
-  Sidebar, 
-  SidebarProvider,
-  SidebarContent,
-  SidebarMenu,
-  SidebarMenuItem,
-  SidebarMenuButton
-} from "@/components/ui/sidebar";
 
 const Solutions = () => {
   const [activeTab, setActiveTab] = useState("centralization");
@@ -21,49 +12,49 @@ const Solutions = () => {
       title: "Centraliza tu operación",
       description: "Maneja toda la información en un solo lugar, conectada y ordenada.",
       icon: <Database className="w-6 h-6 text-zaz-blue" />,
-      image: "/solution1.jpg"
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80"
     },
     {
       id: "customers",
       title: "Maneja tus clientes de manera efectiva",
       description: "Gestiona el ciclo completo de tus clientes con herramientas inteligentes.",
       icon: <Users className="w-6 h-6 text-zaz-blue" />,
-      image: "/solution2.jpg"
+      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80"
     },
     {
       id: "ai",
       title: "Automatiza tu operación apoyado en Agentes de AI",
       description: "Implementa asistentes virtuales entrenados para tu negocio.",
       icon: <Bot className="w-6 h-6 text-zaz-blue" />,
-      image: "/solution3.jpg"
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80"
     },
     {
       id: "incentives",
       title: "Sistema de pago de incentivos variables",
       description: "Gestiona comisiones y bonos de forma automatizada y transparente.",
       icon: <DollarSign className="w-6 h-6 text-zaz-blue" />,
-      image: "/solution4.jpg"
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80"
     },
     {
       id: "reconciliation",
       title: "Conciliación 100% automática",
       description: "Olvídate de conciliar manualmente datos entre sistemas.",
       icon: <FileCheck className="w-6 h-6 text-zaz-blue" />,
-      image: "/solution5.jpg"
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80"
     },
     {
       id: "communication",
       title: "Eficienta tu coordinación y comunicación",
       description: "Mejora la colaboración interna con herramientas integradas.",
       icon: <MessageSquare className="w-6 h-6 text-zaz-blue" />,
-      image: "/solution6.jpg"
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=800"
     },
     {
       id: "integrations",
       title: "Integraciones",
       description: "Conexión sencilla con WhatsApp, correo, Google Calendar, ERPs, CRMs y otras herramientas clave, sin desarrollos complejos.",
       icon: <Layers className="w-6 h-6 text-zaz-blue" />,
-      image: "/solution7.jpg"
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800"
     }
   ];
 
@@ -115,13 +106,12 @@ const Solutions = () => {
             <BlurredCard className="h-full">
               {ActiveSolution && (
                 <div className="flex flex-col space-y-6">
-                  <div className="aspect-video rounded-lg overflow-hidden bg-gray-200 flex items-center justify-center">
-                    {/* Fallback if no image is available */}
-                    <div className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 w-full h-full flex items-center justify-center">
-                      <div className="w-16 h-16 rounded-full bg-zaz-blue/10 flex items-center justify-center">
-                        {ActiveSolution.icon}
-                      </div>
-                    </div>
+                  <div className="aspect-video rounded-lg overflow-hidden bg-gray-200">
+                    <img 
+                      src={ActiveSolution.image} 
+                      alt={ActiveSolution.title}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold mb-3">{ActiveSolution.title}</h3>
