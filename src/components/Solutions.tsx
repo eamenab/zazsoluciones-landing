@@ -1,74 +1,47 @@
 
-import React, { useState } from "react";
-import { cn } from "@/lib/utils";
+import React from "react";
 import BlurredCard from "./ui/BlurredCard";
-import { ArrowRight, Users, Bot, Layers } from "lucide-react";
-
-interface Solution {
-  id: string;
-  title: string;
-  icon: React.ReactNode;
-  description: string;
-  features: string[];
-  image: string;
-}
+import { Check, ArrowRight, Database, Users, Bot, DollarSign, FileCheck, MessageSquare, Layers } from "lucide-react";
 
 const Solutions = () => {
-  const solutions: Solution[] = [
+  const solutionItems = [
+    {
+      id: "centralization",
+      title: "Centraliza tu operación",
+      description: "Maneja toda la información en un solo lugar, conectada y ordenada.",
+      icon: <Database className="w-6 h-6 text-zaz-blue" />,
+    },
     {
       id: "customers",
-      title: "Manejo de Clientes",
-      icon: <Users className="w-5 h-5" />,
-      description:
-        "Gestiona todo el ciclo de vida de tus clientes con herramientas inteligentes que automatizan tareas y mejoran la relación postventa.",
-      features: [
-        "Seguimiento personalizado de clientes",
-        "Automatización de comunicaciones",
-        "Análisis predictivo de comportamiento",
-        "Segmentación avanzada",
-        "Historial de interacciones centralizado"
-      ],
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800&auto=format&fit=crop"
+      title: "Maneja tus clientes de manera efectiva",
+      description: "Gestiona el ciclo completo de tus clientes con herramientas inteligentes.",
+      icon: <Users className="w-6 h-6 text-zaz-blue" />,
     },
     {
       id: "ai",
-      title: "Agentes de IA",
-      icon: <Bot className="w-5 h-5" />,
-      description:
-        "Implementa asistentes virtuales entrenados específicamente para tu negocio, capaces de resolver consultas y optimizar procesos.",
-      features: [
-        "Chatbots personalizados por industria",
-        "Procesamiento de lenguaje natural avanzado",
-        "Resolución automática de consultas frecuentes",
-        "Aprendizaje continuo basado en interacciones",
-        "Integración con sistemas existentes"
-      ],
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop"
+      title: "Automatiza tu operación apoyado en Agentes de AI",
+      description: "Implementa asistentes virtuales entrenados para tu negocio.",
+      icon: <Bot className="w-6 h-6 text-zaz-blue" />,
     },
     {
-      id: "integrations",
-      title: "Integraciones",
-      icon: <Layers className="w-5 h-5" />,
-      description:
-        "Conecta todas tus herramientas existentes en una plataforma unificada, eliminando silos de información y aumentando la productividad.",
-      features: [
-        "Conectores para más de 200 plataformas",
-        "Sincronización en tiempo real",
-        "Automatización de flujos entre sistemas",
-        "Paneles unificados de información",
-        "APIs personalizadas para desarrolladores"
-      ],
-      image: "https://images.unsplash.com/photo-1580894732444-8ecded7900cd?q=80&w=800&auto=format&fit=crop"
-    }
+      id: "incentives",
+      title: "Sistema de pago de incentivos variables",
+      description: "Gestiona comisiones y bonos de forma automatizada y transparente.",
+      icon: <DollarSign className="w-6 h-6 text-zaz-blue" />,
+    },
+    {
+      id: "reconciliation",
+      title: "Conciliación 100% automática",
+      description: "Olvídate de conciliar manualmente datos entre sistemas.",
+      icon: <FileCheck className="w-6 h-6 text-zaz-blue" />,
+    },
+    {
+      id: "communication",
+      title: "Eficienta tu coordinación y comunicación",
+      description: "Mejora la colaboración interna con herramientas integradas.",
+      icon: <MessageSquare className="w-6 h-6 text-zaz-blue" />,
+    },
   ];
-
-  const [activeSolution, setActiveSolution] = useState<string>(solutions[0].id);
-
-  const handleSolutionChange = (id: string) => {
-    setActiveSolution(id);
-  };
-
-  const currentSolution = solutions.find((s) => s.id === activeSolution) || solutions[0];
 
   return (
     <section id="soluciones" className="py-20 relative overflow-hidden">
@@ -85,72 +58,40 @@ const Solutions = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
-          {/* Solution selector - now at the top-left */}
-          <div className="md:col-span-4 animate-slide-in">
-            <div className="space-y-2">
-              {solutions.map((solution) => (
-                <button
-                  key={solution.id}
-                  onClick={() => handleSolutionChange(solution.id)}
-                  className={cn(
-                    "w-full text-left p-4 rounded-lg transition-all duration-300 flex items-center gap-3",
-                    activeSolution === solution.id
-                      ? "bg-blue-gradient text-white shadow-lg"
-                      : "hover:bg-zaz-light-gray"
-                  )}
-                >
-                  <div
-                    className={cn(
-                      "w-10 h-10 rounded-full flex items-center justify-center",
-                      activeSolution === solution.id
-                        ? "bg-white/20"
-                        : "bg-zaz-blue/10"
-                    )}
-                  >
-                    {solution.icon}
-                  </div>
-                  <span className="font-medium">{solution.title}</span>
-                </button>
-              ))}
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {solutionItems.map((solution, index) => (
+            <BlurredCard 
+              key={index} 
+              className={`p-8 h-full animate-fade-in animation-delay-${index * 100}`}
+              hoverEffect={true}
+            >
+              <div className="w-14 h-14 rounded-full bg-zaz-blue/10 flex items-center justify-center mb-6">
+                {solution.icon}
+              </div>
+              <h3 className="text-xl font-bold mb-3">{solution.title}</h3>
+              <p className="text-zaz-dark-gray">{solution.description}</p>
+            </BlurredCard>
+          ))}
+        </div>
 
-          {/* Solution image - now aligned with the menu */}
-          <div className="md:col-span-8 animate-slide-in-right">
-            <div className="relative rounded-xl overflow-hidden aspect-[16/9] shadow-2xl">
-              <img
-                src={currentSolution.image}
-                alt={currentSolution.title}
-                className="w-full h-full object-cover transition-all duration-500"
-              />
-            </div>
-            
-            {/* Solution description - now below the image */}
-            <div className="mt-6">
-              <BlurredCard className="border border-zaz-gray">
-                <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                  {currentSolution.title}
-                </h3>
-                <p className="text-zaz-dark-gray mb-6">
-                  {currentSolution.description}
+        {/* Integrations section */}
+        <div className="mt-16 animate-fade-in animation-delay-500">
+          <BlurredCard className="p-8 border-2 border-zaz-blue">
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
+              <div className="w-14 h-14 rounded-full bg-blue-gradient flex items-center justify-center flex-shrink-0">
+                <Layers className="w-6 h-6 text-white" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold mb-2">Integraciones</h3>
+                <p className="text-zaz-dark-gray">
+                  Conexión sencilla con WhatsApp, correo, Google Calendar, ERPs, CRMs y otras herramientas clave, sin desarrollos complejos.
                 </p>
-                <ul className="space-y-3 mb-6">
-                  {currentSolution.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2">
-                      <div className="w-5 h-5 rounded-full bg-zaz-blue/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <Check className="w-3 h-3 text-zaz-blue" />
-                      </div>
-                      <span className="text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <button className="text-zaz-blue font-medium flex items-center hover:underline transition-all">
-                  Conoce más <ArrowRight className="w-4 h-4 ml-1" />
-                </button>
-              </BlurredCard>
+              </div>
+              <button className="mt-4 md:mt-0 flex items-center text-zaz-blue font-medium hover:underline transition-all">
+                Conoce más <ArrowRight className="w-4 h-4 ml-1" />
+              </button>
             </div>
-          </div>
+          </BlurredCard>
         </div>
       </div>
       
@@ -159,21 +100,5 @@ const Solutions = () => {
     </section>
   );
 };
-
-// For the Check icon
-const Check = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    <polyline points="20 6 9 17 4 12" />
-  </svg>
-);
 
 export default Solutions;
