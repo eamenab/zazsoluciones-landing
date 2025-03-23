@@ -46,7 +46,7 @@ const Header = () => {
             Nosotros
           </a>
           <Button className="bg-blue-gradient shadow-button font-medium transition-all hover:shadow-lg hover:scale-105">
-            <a href="#reunion">Agendanos una Reunión</a>
+            <a href="#reunion">Agenda una Reunión</a>
           </Button>
         </nav>
 

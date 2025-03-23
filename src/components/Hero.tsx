@@ -17,7 +17,7 @@ const Hero = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-blue-gradient text-white px-6 py-6 shadow-button font-medium text-base hover:shadow-lg transition-all hover:scale-105 flex items-center">
-              <a href="#reunion">Agendanos una Reunión</a>
+              <a href="#reunion">Agenda una Reunión</a>
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
