@@ -4,55 +4,41 @@ import BlurredCard from "./ui/BlurredCard";
 import { Database, Users, Bot, DollarSign, FileCheck, MessageSquare, Layers } from "lucide-react";
 
 const Solutions = () => {
-  const [activeTab, setActiveTab] = useState("centralization");
+  const [activeTab, setActiveTab] = useState("customers");
 
   const solutions = [
     {
-      id: "centralization",
-      title: "Centraliza tu operación",
-      description: "Maneja toda la información en un solo lugar, conectada y ordenada.",
-      icon: <Database className="w-6 h-6 text-zaz-blue" />,
-      image: "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?auto=format&fit=crop&q=80"
-    },
-    {
       id: "customers",
-      title: "Maneja tus clientes de manera efectiva",
-      description: "Gestiona el ciclo completo de tus clientes con herramientas inteligentes.",
+      title: "Fideliza Clientes: Herramientas para una Gestión Eficaz",
+      description: "Construye relaciones duraderas con tus clientes a través de comunicación continua, seguimiento personalizado y experiencias que impulsen la recurrencia.",
       icon: <Users className="w-6 h-6 text-zaz-blue" />,
-      image: "https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&q=80"
+      image: "https://frkhjiuttlxjipkykjti.supabase.co/storage/v1/object/public/eaconsulting//CRM.webp?auto=format&fit=crop&q=80"
     },
     {
       id: "ai",
-      title: "Automatiza tu operación apoyado en Agentes de AI",
-      description: "Implementa asistentes virtuales entrenados para tu negocio.",
+      title: "Automatización Inteligente: Agentes de IA para Optimizar tu Operación",
+      description: "Elimina tareas repetitivas y libera tu equipo para enfocarse en el crecimiento estratégico de tu negocio.",
       icon: <Bot className="w-6 h-6 text-zaz-blue" />,
-      image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80"
+      image: "https://frkhjiuttlxjipkykjti.supabase.co/storage/v1/object/public/eaconsulting//ade769f3-ai.webp?auto=format&fit=crop&q=80"
     },
     {
       id: "incentives",
-      title: "Sistema de pago de incentivos variables",
-      description: "Gestiona comisiones y bonos de forma automatizada y transparente.",
+      title: "Pagos Eficaces: Automatiza tus Incentivos y Reconoce el Desempeño",
+      description: "Impulsa el rendimiento de tu equipo con un sistema de incentivos personalizado a tu negocio, transparente, y sin errores.",
       icon: <DollarSign className="w-6 h-6 text-zaz-blue" />,
-      image: "https://images.unsplash.com/photo-1599658880436-c61792e70672?auto=format&fit=crop&q=80"
+      image: "https://images.unsplash.com/photo-1608222351212-18fe0ec7b13b?auto=format&fit=crop&q=80"
     },
     {
       id: "reconciliation",
-      title: "Conciliación 100% automática",
-      description: "Olvídate de conciliar manualmente datos entre sistemas.",
+      title: "Conciliación Automatizada: Ahorra Tiempo y Reduce Errores",
+      description: "Libérate de horas de conciliación manual y minimiza el riesgo de errores costosos en tus finanzas.",
       icon: <FileCheck className="w-6 h-6 text-zaz-blue" />,
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80"
     },
     {
-      id: "communication",
-      title: "Eficienta tu coordinación y comunicación",
-      description: "Mejora la colaboración interna con herramientas integradas.",
-      icon: <MessageSquare className="w-6 h-6 text-zaz-blue" />,
-      image: "https://images.unsplash.com/photo-1579226905180-636b76d96082?auto=format&fit=crop&q=80&w=800"
-    },
-    {
       id: "integrations",
-      title: "Integraciones",
-      description: "Conexión sencilla con WhatsApp, correo, Google Calendar, ERPs, CRMs y otras herramientas clave, sin desarrollos complejos.",
+      title: "Integraciones Inteligentes: Conecta Todas tus Herramientas en un Solo Lugar",
+      description: "Rompe los silos de información y crea un flujo de trabajo eficiente con una integración perfecta de tus sistemas.",
       icon: <Layers className="w-6 h-6 text-zaz-blue" />,
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80&w=800"
     }
@@ -65,13 +51,13 @@ const Solutions = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <div className="inline-block px-3 py-1 rounded-full bg-zaz-purple/10 text-zaz-purple text-sm font-medium mb-4">
-            Nuestras Soluciones
+            Soluciones
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Tecnología Avanzada para tu Empresa
+            Tecnología Inteligente para tu Negocio
           </h2>
           <p className="text-zaz-dark-gray">
-            Diseñamos soluciones que se adaptan perfectamente a tus procesos y necesidades específicas.
+            Impulsa tu crecimiento con tecnología de vanguardia que se integra a la perfección con tu empresa, brindándote una ventaja competitiva en el mercado.
           </p>
         </div>
 

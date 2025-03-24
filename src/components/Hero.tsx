@@ -10,15 +10,15 @@ const Hero = () => {
           <div className="max-w-2xl animate-fade-in">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
               Del Excel al orden.{" "}
-              <span className="highlight-text">Software a tu medida, en semanas, no meses.</span>
+              <span className="highlight-text">Software a tu medida, en semanas.</span>
             </h1>
             <p className="text-lg text-zaz-dark-gray mb-8 max-w-lg">
-              Automatiza tareas repetitivas y conecta todas las partes de tu operación en un solo sistema, hecho a medida e impulsado por AI.
+              Transforma tu operación con un sistema hecho a medida, impulsado por IA, que automatiza tareas repetitivas y conecta todas tus áreas en un solo lugar.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-blue-gradient text-white px-6 py-6 shadow-button font-medium text-base hover:shadow-lg transition-all hover:scale-105 flex items-center">
               <a href="#reunion">Agenda una Reunión</a>
-                <ArrowRight className="ml-2 h-5 w-5" />
+              <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button
                 variant="outline"

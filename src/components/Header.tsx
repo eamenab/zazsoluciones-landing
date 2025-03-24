@@ -85,7 +85,7 @@ const Header = () => {
             Nosotros
           </a>
           <Button className="bg-blue-gradient shadow-button font-medium transition-all hover:shadow-lg w-full">
-            Agendar Reunión
+            <a href="#reunion">Agenda una Reunión</a>
           </Button>
         </nav>
       </div>

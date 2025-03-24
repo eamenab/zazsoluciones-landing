@@ -6,23 +6,23 @@ import BlurredCard from "./ui/BlurredCard";
 const BusinessBenefits = () => {
   const benefits = [
     {
-      title: "Soluciones 100% adaptadas a tu operación",
-      description: "El software se adapta al flujo del cliente, no al revés.",
+      title: "Soluciones Software que se Adapta a Ti, No al Revés",
+      description: "Cada negocio es único, y tu software debería reflejarlo. Diseñamos soluciones 100% personalizadas para adaptarnos a tus procesos específicos. ¿El resultado? Mayor eficiencia, reducción de errores y un software que realmente impulsa tu crecimiento.",
       icon: <Check className="w-6 h-6 text-zaz-blue" />,
     },
     {
-      title: "Rapidez",
-      description: "Soluciones rápidas para validar y ajustar con agilidad.",
+      title: "Implementación Rápida, Resultados Aún Más Rápidos",
+      description: "Olvídate de largos procesos de implementación. Nuestras soluciones se despliegan rápidamente, para que puedas empezar a disfrutar de sus beneficios en cuestión de días, no meses.",
       icon: <Clock className="w-6 h-6 text-zaz-blue" />,
     },
     {
-      title: "Flexibilidad",
-      description: "Herramientas que se adaptan al ritmo del negocio.",
+      title: "Escala Sin Límites: Software Flexible para un Crecimiento Sostenible",
+      description: "No importa si eres una startup o una gran empresa, nuestras soluciones flexibles se adaptan a tu escala. Optimiza tus recursos, reduce costos y maximiza tu eficiencia con herramientas que crecen contigo",
       icon: <Layers className="w-6 h-6 text-zaz-blue" />,
     },
     {
-      title: "Costos",
-      description: "Menores costos de implementación y mantenimiento.",
+      title: "Optimiza Tu Inversión: Software que Genera Valor, Accesible a Cualquier Empresa",
+      description: "Controla tus costos sin sacrificar la calidad. Ofrecemos soluciones con costos de implementación eficientes y un mantenimiento accesible, diseñadas para optimizar tu presupuesto y maximizar tu rentabilidad.",
       icon: <CreditCard className="w-6 h-6 text-zaz-blue" />,
     },
   ];
@@ -32,14 +32,13 @@ const BusinessBenefits = () => {
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
           <div className="inline-block px-3 py-1 rounded-full bg-zaz-blue/10 text-zaz-blue text-sm font-medium mb-4">
-            Nuestro Enfoque
+            Pensada para tu Negocio
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Pensada para tu Negocio
+            Software pensado en tí y diseñado para Impulsar Tu Éxito
           </h2>
           <p className="text-zaz-dark-gray">
-            Creamos software que se adapta perfectamente a tus procesos y necesidades específicas.
-          </p>
+            Creamos soluciones que se adaptan perfectamente a tus procesos y necesidades específicas, brindándote la flexibilidad, rapidez y eficiencia que necesitas para alcanzar tus objetivos.          </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
