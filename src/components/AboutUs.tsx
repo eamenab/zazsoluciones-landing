@@ -58,7 +58,7 @@ const AboutUs = () => {
               <h4 className="text-xl font-bold mb-4">{founder.name}</h4>
               <a
                 href={`mailto:${founder.email}`}
-                className="flex items-center gap-2 text-zinc-600 hover:text-zinc-800 mb-2"
+                className="flex items-center gap-2 text-zaz-dark-gray hover:text-zinc-800 mb-2"
               >
                 <Mail className="w-5 h-5" />
                 <span className="break-all">{founder.email}</span>
