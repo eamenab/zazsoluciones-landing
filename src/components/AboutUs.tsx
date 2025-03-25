@@ -8,7 +8,7 @@ const AboutUs = () => {
     {
       image: "cz.jpg",
       name: "Cristián Zarhi",
-      email: "czarhi@zazsoluciones",
+      email: "czarhi@zazsoluciones.cl",
       linkedin: "",
       description:
         "Con un MBA de la Universidad de Chicago e Ingeniería Civil Industrial de la PUC, mi pasión es transformar empresas resolviendo sus desafíos más complejos y desbloqueando su potencial de crecimiento. Apalanco mi experiencia liderando proyectos de tecnología e innovación, estrategia y desarrollo de negocios para ayudar a empresas a escalar sus negocio y alcanzar sus metas."
@@ -16,7 +16,7 @@ const AboutUs = () => {
     {
       image: "ea.jpg",
       name: "Ernesto Amenábar",
-      email: "eamenabar@zazsoluciones",
+      email: "eamenabar@zazsoluciones.cl",
       linkedin: "",
       description:
         "Ingeniero Civil Industrial PUC. He trabajado en Corredoras de Bolsa y empresas financieras en el área de operaciones y liderando implementaciones de mejoras a través de soluciones tecnológicas a medida, también he realizado consultoría en optimización de procesos. Mi enfoque está en crear y acompañar a las empresas en la implementación de herramientas tecnológicas innovadoras que permitan mejorar su eficiencia y servicio al cliente."
@@ -56,13 +56,13 @@ const AboutUs = () => {
                 className="w-24 h-24 rounded-full object-cover mb-6 shadow-md"
               />
               <h4 className="text-xl font-bold mb-4">{founder.name}</h4>
-              <a href={`mailto:${founder.email}`} className="text-zinc-600 hover:text-zinc-800 mb-2">
-                <p className="flex items-center gap-2">
-                  <Mail className="w-5 h-5" />
-                  {founder.email}
-                </p>
+              <a
+                href={`mailto:${founder.email}`}
+                className="flex items-center gap-2 text-zinc-600 hover:text-zinc-800 mb-2"
+              >
+                <Mail className="w-5 h-5" />
+                <span className="break-all">{founder.email}</span>
               </a>
-
               <hr className="w-full border-t border-zinc-200 my-4" />
               <p className="text-zaz-dark-gray text-center">{founder.description}</p>
             </BlurredCard>

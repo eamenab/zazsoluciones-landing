@@ -6,13 +6,13 @@ import BlurredCard from "./ui/BlurredCard";
 const BusinessBenefits = () => {
   const benefits = [
     {
-      title: "Soluciones Software que se Adapta a Ti, No al Revés",
+      title: "Soluciones de Software que se Adapta a Ti, No al Revés",
       description: "Cada negocio es único, y tu software debería reflejarlo. Diseñamos soluciones 100% personalizadas para adaptarnos a tus procesos específicos. ¿El resultado? Mayor eficiencia, reducción de errores y un software que realmente impulsa tu crecimiento.",
       icon: <Check className="w-6 h-6 text-zaz-blue" />,
     },
     {
       title: "Implementación Rápida, Resultados Aún Más Rápidos",
-      description: "Olvídate de largos procesos de implementación. Nuestras soluciones se despliegan rápidamente, para que puedas empezar a disfrutar de sus beneficios en cuestión de días, no meses.",
+      description: "Olvídate de largos procesos de implementación. Nuestras soluciones se despliegan rápidamente, para que puedas empezar a disfrutar de sus beneficios en cuestión de semanas, no meses.",
       icon: <Clock className="w-6 h-6 text-zaz-blue" />,
     },
     {
