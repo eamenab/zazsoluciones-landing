@@ -32,7 +32,7 @@ const Header = () => {
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <a href="#" className="flex items-center">
-          <img src={`${import.meta.env.BASE_URL}logo.png`} className="h-8 w-auto" />
+          <img src={`${import.meta.env.BASE_URL}logo.png`} className="h-8 w-auto" alt="Zaz Logo" />
           <span className="text-2xl font-bold bg-blue-gradient highlight-text">Zaz</span>
           <span className="ml-1 text-lg font-medium dark:text-white">Soluciones</span>
         </a>
