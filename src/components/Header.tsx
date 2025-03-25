@@ -39,13 +39,13 @@ const Header = () => {
 
         {/* Desktop navigation */}
         <nav className="hidden md:flex items-center space-x-6">
-          <a href="#pensada" className="nav-link text-sm font-medium text-zaz-dark-gray hover:text-zaz-black dark:text-gray-300 dark:hover:text-white transition-colors">
+          <a href="#pensada" className="nav-link text-sm font-medium text-zaz-dark-gray hover:text-zaz-black dark:text-white dark:hover:text-white transition-colors">
             Pensada para tu Negocio
           </a>
-          <a href="#soluciones" className="nav-link text-sm font-medium text-zaz-dark-gray hover:text-zaz-black dark:text-gray-300 dark:hover:text-white transition-colors">
+          <a href="#soluciones" className="nav-link text-sm font-medium text-zaz-dark-gray hover:text-zaz-black dark:text-white dark:hover:text-white transition-colors">
             Soluciones
           </a>
-          <a href="#nosotros" className="nav-link text-sm font-medium text-zaz-dark-gray hover:text-zaz-black dark:text-gray-300 dark:hover:text-white transition-colors">
+          <a href="#nosotros" className="nav-link text-sm font-medium text-zaz-dark-gray hover:text-zaz-black dark:text-white dark:hover:text-white transition-colors">
             Nosotros
           </a>
           <ThemeToggle />
@@ -57,7 +57,7 @@ const Header = () => {
         {/* Mobile menu and toggle */}
         <div className="md:hidden flex items-center space-x-4">
           <ThemeToggle />
-          <button className="text-zaz-dark-gray dark:text-gray-300" onClick={toggleMobileMenu}>
+          <button className="text-zaz-dark-gray dark:text-white" onClick={toggleMobileMenu}>
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
@@ -72,21 +72,21 @@ const Header = () => {
         <nav className="container mx-auto px-4 flex flex-col space-y-4 pb-4">
           <a
             href="#pensada"
-            className="text-sm font-medium text-zaz-dark-gray hover:text-zaz-black dark:text-gray-300 dark:hover:text-white transition-colors py-2"
+            className="text-sm font-medium text-zaz-dark-gray hover:text-zaz-black dark:text-white dark:hover:text-white transition-colors py-2"
             onClick={() => setMobileMenuOpen(false)}
           >
             Pensada para tu Negocio
           </a>
           <a
             href="#soluciones"
-            className="text-sm font-medium text-zaz-dark-gray hover:text-zaz-black dark:text-gray-300 dark:hover:text-white transition-colors py-2"
+            className="text-sm font-medium text-zaz-dark-gray hover:text-zaz-black dark:text-white dark:hover:text-white transition-colors py-2"
             onClick={() => setMobileMenuOpen(false)}
           >
             Soluciones
           </a>
           <a
             href="#nosotros"
-            className="text-sm font-medium text-zaz-dark-gray hover:text-zaz-black dark:text-gray-300 dark:hover:text-white transition-colors py-2"
+            className="text-sm font-medium text-zaz-dark-gray hover:text-zaz-black dark:text-white dark:hover:text-white transition-colors py-2"
             onClick={() => setMobileMenuOpen(false)}
           >
             Nosotros

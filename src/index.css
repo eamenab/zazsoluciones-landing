@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
 @tailwind base;
@@ -135,6 +136,11 @@
   @apply bg-[radial-gradient(rgba(90,76,219,0.1)_2px,transparent_2px),radial-gradient(rgba(90,76,219,0.1)_2px,transparent_2px)] dark:bg-[radial-gradient(rgba(116,189,253,0.1)_2px,transparent_2px),radial-gradient(rgba(116,189,253,0.1)_2px,transparent_2px)];
   background-size: 30px 30px;
   background-position: 0 0, 15px 15px;
+}
+
+/* Update text colors for dark mode */
+.dark .text-zaz-dark-gray {
+  @apply text-white font-medium;
 }
 
 /* Animation Utilities */
