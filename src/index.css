@@ -48,13 +48,13 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background: 240 10% 6%;
     --foreground: 0 0% 98%;
 
-    --card: 240 10% 3.9%;
+    --card: 240 10% 8%;
     --card-foreground: 0 0% 98%;
 
-    --popover: 240 10% 3.9%;
+    --popover: 240 10% 8%;
     --popover-foreground: 0 0% 98%;
 
     --primary: 225 98% 50%;
@@ -109,10 +109,7 @@
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  @apply bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md border border-white/12 dark:border-white/5 shadow-lg dark:shadow-black/20;
 }
 
 .highlight-text {
@@ -136,9 +133,7 @@
 }
 
 .tech-pattern {
-  background-image: 
-    radial-gradient(rgba(90, 76, 219, 0.1) 2px, transparent 2px), 
-    radial-gradient(rgba(90, 76, 219, 0.1) 2px, transparent 2px);
+  @apply bg-[radial-gradient(rgba(90,76,219,0.1)_2px,transparent_2px),radial-gradient(rgba(90,76,219,0.1)_2px,transparent_2px)] dark:bg-[radial-gradient(rgba(116,189,253,0.1)_2px,transparent_2px),radial-gradient(rgba(116,189,253,0.1)_2px,transparent_2px)];
   background-size: 30px 30px;
   background-position: 0 0, 15px 15px;
 }
@@ -182,4 +177,16 @@
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+/* Dark mode specific styles */
+.dark .highlight-text {
+  background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.dark .bg-blue-gradient {
+  background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);
 }
