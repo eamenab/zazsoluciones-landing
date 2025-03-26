@@ -12,7 +12,7 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
-  const [isDarkMode, setIsDarkMode] = useState(true); // Default to light mode
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   // Set theme after component mounts to safely access browser APIs
   useEffect(() => {

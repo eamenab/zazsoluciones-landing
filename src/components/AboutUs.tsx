@@ -30,7 +30,7 @@ const AboutUs = () => {
           <div className="inline-block px-3 py-1 rounded-full bg-zaz-blue/10 text-zaz-blue text-sm font-medium mb-4">
             Nosotros
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Un poco de Nostros</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">Un poco de Nosotros</h2>
         </div>
 
         <div className="max-w-4xl mx-auto mb-16 animate-fade-in animation-delay-200">

@@ -2,8 +2,21 @@
 import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { useTheme } from "@/context/ThemeContext";
 
 const Hero = () => {
+
+  const { isDarkMode } = useTheme()
+  const videoSrc = isDarkMode
+    // ? `${import.meta.env.BASE_URL}12716-241674181_tiny.mp4`
+    ? `${import.meta.env.BASE_URL}12716-241674181_tiny.mp4`
+    : `${import.meta.env.BASE_URL}26011-353916142_tiny.mp4`
+    //: `${import.meta.env.BASE_URL}26011-353916142_tiny.mp4`
+
+  const brightnessContrastClass = isDarkMode
+    ? 'brightness-[1.1] contrast-[0.85]'
+    : 'brightness-[1.1] contrast-[0.85]'
+
   return (
     <section className="relative pt-32 md:pt-40 pb-16 md:pb-24 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
@@ -36,8 +49,8 @@ const Hero = () => {
                 loop
                 muted
                 playsInline
-                className="h-full w-auto object-cover brightness-[1.1] contrast-[0.85]"
-                src={`${import.meta.env.BASE_URL}26011-353916142_tiny.mp4`}
+                className={`h-full w-auto object-cover ${brightnessContrastClass}`}
+                src={videoSrc}
               />
               {/* Edge blending overlays */}
               <div className="absolute top-0 left-0 h-full w-80 bg-gradient-to-r from-white dark:from-zaz-black to-transparent z-10" />
