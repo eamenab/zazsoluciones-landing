@@ -35,7 +35,7 @@ const BusinessBenefits = () => {
             Pensada para tu Negocio
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Software pensado en tí y diseñado para Impulsar Tu Éxito
+            Software pensado en ti y diseñado para Impulsar Tu Éxito
           </h2>
           <p className="text-zaz-dark-gray">
             Creamos soluciones que se adaptan perfectamente a tus procesos y necesidades específicas, brindándote la flexibilidad, rapidez y eficiencia que necesitas para alcanzar tus objetivos.          </p>

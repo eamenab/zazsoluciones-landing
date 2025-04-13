@@ -3,6 +3,17 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useTheme } from "@/context/ThemeContext";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+
+
+const phrases = [
+  "Software a tu medida, en semanas.",
+  "Automatiza tu operación sin fricciones.",
+  "Soluciones que se adaptan a tu negocio.",
+  "Desde Excel hacia el control total.",  
+  "SaaS personalizado con inteligencia artificial."
+];
 
 const Hero = () => {
 
@@ -17,6 +28,15 @@ const Hero = () => {
     ? 'brightness-[1.1] contrast-[0.85]'
     : 'brightness-[1.1] contrast-[0.85]'
 
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % phrases.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative pt-32 md:pt-40 pb-16 md:pb-24 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
@@ -24,7 +44,19 @@ const Hero = () => {
           <div className="max-w-2xl animate-fade-in">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
               Del Excel al orden.{" "}
-              <span className="highlight-text">Software a tu medida, en semanas.</span>
+              <span className="highlight-text inline-block relative h-[1.2em]">
+                <AnimatePresence mode="wait">
+                  <motion.span
+                    key={phrases[index]}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    {phrases[index]}
+                  </motion.span>
+                </AnimatePresence>
+              </span>
             </h1>
             <p className="text-lg text-zaz-dark-gray dark:text-gray-300 mb-8 max-w-lg">
               Transforma tu operación con un sistema hecho a medida, impulsado por IA, que automatiza tareas repetitivas y conecta todas tus áreas en un solo lugar.
